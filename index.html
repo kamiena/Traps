@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>トラップス 公式サイト</title>
+  <meta name="description" content="いたずら好きな「クマチ」から村を守れ！トラップを活用して相手の村にクマチを押し込む、カードタイプの2人対戦ゲーム「トラップス」の公式サイトです。">
+  <meta name="theme-color" content="#60d8f8">
+
+  <!-- OGP：公開URLが決まったら og:url / og:image を絶対URL（https://〜）に差し替えてください -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="トラップス 公式サイト">
+  <meta property="og:title" content="トラップス 公式サイト">
+  <meta property="og:description" content="いたずら好きな「クマチ」から村を守れ！相手の村にクマチを押し込む、カードタイプの2人対戦ゲーム。">
+  <meta property="og:image" content="assets/img/ogp.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Mochiy+Pop+One&family=Zen+Maru+Gothic:wght@500;700;900&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へスキップ</a>
+
+  <!-- 使い回すイラスト（ハチ・クマの顔・家・肉球・雲） -->
+  <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <defs>
+      <clipPath id="bee-body-clip"><ellipse cx="56" cy="44" rx="20" ry="15.2"/></clipPath>
+    </defs>
+    <symbol id="i-bee" viewBox="0 0 90 70">
+      <g stroke="#2a1206" stroke-width="3.5">
+        <ellipse cx="49" cy="19" rx="11" ry="15" transform="rotate(-28 49 19)" fill="#d9f4ff"/>
+        <ellipse cx="65" cy="21" rx="10.5" ry="14" transform="rotate(24 65 21)" fill="#d9f4ff"/>
+        <ellipse cx="56" cy="44" rx="22" ry="17" fill="#ffe14d"/>
+      </g>
+      <g clip-path="url(#bee-body-clip)" fill="#2a1206">
+        <rect x="49" y="18" width="6.5" height="54" transform="rotate(10 52 44)"/>
+        <rect x="62" y="18" width="6.5" height="54" transform="rotate(10 65 44)"/>
+      </g>
+      <path d="M77 41.5l10 3.5-9.5 4.5z" fill="#2a1206"/>
+      <g stroke="#2a1206" stroke-width="3" fill="none" stroke-linecap="round">
+        <path d="M22 25c-2-8-6-13-12-14"/>
+        <path d="M33 24c2-8 6-13 11-15"/>
+      </g>
+      <circle cx="10" cy="11" r="3.6" fill="#2a1206"/>
+      <circle cx="44" cy="9" r="3.6" fill="#2a1206"/>
+      <circle cx="28" cy="41" r="17" fill="#ffe14d" stroke="#2a1206" stroke-width="3.5"/>
+      <circle cx="22" cy="39" r="2.5" fill="#2a1206"/>
+      <circle cx="33.5" cy="39" r="2.5" fill="#2a1206"/>
+      <path d="M24.5 45.5q3.3 3 6.6 0" stroke="#2a1206" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-bearhead" viewBox="0 0 100 88">
+      <g stroke="#3b1d0c" stroke-width="5">
+        <circle cx="20" cy="22" r="16" fill="#b0614a"/>
+        <circle cx="80" cy="22" r="16" fill="#b0614a"/>
+      </g>
+      <circle cx="20" cy="22" r="8.5" fill="#ecc690"/>
+      <circle cx="80" cy="22" r="8.5" fill="#ecc690"/>
+      <ellipse cx="50" cy="53" rx="44" ry="32.5" fill="#b0614a" stroke="#3b1d0c" stroke-width="5"/>
+    </symbol>
+    <symbol id="i-house" viewBox="0 0 48 44">
+      <path d="M24 3 3 21h6v20h30V21h6z" fill="currentColor" stroke="#3b1d0c" stroke-width="3" stroke-linejoin="round"/>
+      <rect x="19.5" y="27" width="9" height="14" rx="2.5" fill="#fffaf0" stroke="#3b1d0c" stroke-width="2.5"/>
+    </symbol>
+    <symbol id="i-paw" viewBox="0 0 40 40">
+      <ellipse cx="20" cy="27.5" rx="10" ry="8.5"/>
+      <ellipse cx="8.5" cy="17" rx="4" ry="5" transform="rotate(-20 8.5 17)"/>
+      <ellipse cx="15.5" cy="10" rx="4" ry="5.2" transform="rotate(-8 15.5 10)"/>
+      <ellipse cx="24.5" cy="10" rx="4" ry="5.2" transform="rotate(8 24.5 10)"/>
+      <ellipse cx="31.5" cy="17" rx="4" ry="5" transform="rotate(20 31.5 17)"/>
+    </symbol>
+    <symbol id="i-cloud" viewBox="0 0 200 100">
+      <g fill="#bfe8fb">
+        <circle cx="60" cy="62" r="29"/><circle cx="101" cy="51" r="39"/><circle cx="145" cy="62" r="29"/><rect x="38" y="62" width="130" height="31" rx="15.5"/>
+      </g>
+      <g fill="#ffffff">
+        <circle cx="60" cy="56" r="27"/><circle cx="101" cy="45" r="37"/><circle cx="144" cy="57" r="26"/><rect x="38" y="56" width="128" height="28" rx="14"/>
+      </g>
+    </symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="#top">
+        <img src="assets/img/logo.webp" alt="トラップス" width="960" height="537">
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="global-nav" aria-label="メニューを開く">
+        <span class="menu-toggle__bar"></span>
+        <span class="menu-toggle__bar"></span>
+        <span class="menu-toggle__bar"></span>
+      </button>
+      <nav class="global-nav" id="global-nav" aria-label="メインメニュー">
+        <ul class="global-nav__list">
+          <li><a href="#about"><span class="global-nav__en">ABOUT</span><span class="global-nav__ja">トラップスとは</span></a></li>
+          <li><a href="#character"><span class="global-nav__en">CHARACTER</span><span class="global-nav__ja">キャラクター</span></a></li>
+          <li><a href="#howto"><span class="global-nav__en">HOW TO PLAY</span><span class="global-nav__ja">遊び方</span></a></li>
+          <li><a href="#cards"><span class="global-nav__en">TRAP CARDS</span><span class="global-nav__ja">トラップカード</span></a></li>
+          <li><a href="#point"><span class="global-nav__en">POINT</span><span class="global-nav__ja">ここがおもしろい</span></a></li>
+          <li><a href="#product"><span class="global-nav__en">PRODUCT</span><span class="global-nav__ja">商品情報</span></a></li>
+        </ul>
+        <img class="global-nav__deco" src="assets/img/kumachi-stand.webp" width="760" height="1004" alt="" loading="lazy">
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <h1 class="visually-hidden" id="hero-title">トラップス：いたずら好きなクマチから村を守る、2人対戦カードゲーム</h1>
+
+      <!-- PC・タブレット：キービジュアル -->
+      <picture class="hero__kv">
+        <source media="(max-width: 767.98px)" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+        <source type="image/webp" srcset="assets/img/kv-1280.webp 1280w, assets/img/kv-1920.webp 1920w" sizes="100vw">
+        <img src="assets/img/kv-1920.webp" width="1920" height="1080" fetchpriority="high"
+             alt="トラップスのキービジュアル。クマの着ぐるみを着たクマチが、ハチミツのツボとハチが飛ぶ森の道を駆けてくる">
+      </picture>
+
+      <!-- スマホ：ロゴとクマチを組み合わせた縦長レイアウト -->
+      <div class="hero__sp">
+        <svg class="hero__cloud hero__cloud--1" aria-hidden="true"><use href="#i-cloud"></use></svg>
+        <svg class="hero__cloud hero__cloud--2" aria-hidden="true"><use href="#i-cloud"></use></svg>
+        <img class="hero__logo" src="assets/img/logo.webp" alt="トラップス" width="960" height="537">
+        <p class="hero__tag">2人対戦カードゲーム</p>
+        <div class="hero__chara">
+          <picture>
+            <source media="(min-width: 768px)" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+            <img src="assets/img/kumachi-jump.webp" width="900" height="966" alt="両手をあげて飛びはねるクマチ">
+          </picture>
+        </div>
+        <svg class="bee hero__bee hero__bee--1" aria-hidden="true"><use href="#i-bee"></use></svg>
+        <svg class="bee bee--flip hero__bee hero__bee--2" aria-hidden="true"><use href="#i-bee"></use></svg>
+        <svg class="hero__hills" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0 58C70 20 150 26 215 48S350 28 400 40V120H0Z" fill="#187050"/>
+          <path d="M0 84C90 58 190 66 255 80S355 70 400 76V120H0Z" fill="#5ccf6a"/>
+        </svg>
+      </div>
+
+      <div class="hedge" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container about__grid">
+        <div class="about__text">
+          <header class="sec-head sec-head--left">
+            <p class="sec-head__en">ABOUT</p>
+            <h2 class="sec-head__ja" id="about-title" data-text="トラップスとは？">トラップスとは？</h2>
+          </header>
+          <p class="about__catch">いたずら好きな<br><span class="about__catch-name">「クマチ」</span>から<br>村を守れ！</p>
+          <p class="about__lead"><span class="nw">トラップ（罠）を活用して、</span><span class="nw">相手の村に</span><span class="nw">クマチを押し込む！</span><br><span class="nw">カードタイプの</span><span class="nw"><strong>2人対戦ゲーム</strong>♪</span></p>
+          <p class="about__body"><span class="nw">アナログゲーム初心者でも、</span><span class="nw">相手の裏を読み合う心理戦で</span><span class="nw">盛り上がれる。</span><br><span class="nw">簡単ルール！</span><span class="nw">でも奥深い！！</span><span class="nw">ユニークな作品です。</span></p>
+          <ul class="chips" aria-label="ゲームの特徴">
+            <li class="chip">2人対戦</li>
+            <li class="chip">カードゲーム</li>
+            <li class="chip">かんたんルール</li>
+            <li class="chip">読み合いの心理戦</li>
+          </ul>
+        </div>
+
+        <div class="about__visual">
+          <div class="fan">
+            <img class="fan__card" style="--i:-2" src="assets/img/card-plus1.webp" width="397" height="397" alt="スズのカード（+1）" loading="lazy">
+            <img class="fan__card" style="--i:2" src="assets/img/card-minus2.webp" width="397" height="397" alt="濃厚なハチミツのカード（−2）" loading="lazy">
+            <img class="fan__card" style="--i:-1" src="assets/img/card-minus1.webp" width="397" height="397" alt="ハチミツのカード（−1）" loading="lazy">
+            <img class="fan__card" style="--i:1" src="assets/img/card-plus2.webp" width="397" height="397" alt="天使のスズのカード（+2）" loading="lazy">
+            <img class="fan__card" style="--i:0" src="assets/img/card-plus4.webp" width="397" height="397" alt="大ドラのカード（+4）" loading="lazy">
+          </div>
+          <svg class="bee about__bee" aria-hidden="true"><use href="#i-bee"></use></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CHARACTER ===================== -->
+    <section class="section character" id="character" aria-labelledby="character-title">
+      <div class="container character__grid">
+        <div class="character__visual">
+          <div class="character__halo" aria-hidden="true"></div>
+          <img class="character__img" src="assets/img/kumachi-stand.webp" width="760" height="1004" alt="クマの着ぐるみを着て、にやりと笑うクマチ" loading="lazy">
+          <p class="character__bubble">いたずら<br>しちゃうぞ〜♪</p>
+          <svg class="bee character__bee character__bee--1" aria-hidden="true"><use href="#i-bee"></use></svg>
+          <svg class="bee bee--flip character__bee character__bee--2" aria-hidden="true"><use href="#i-bee"></use></svg>
+        </div>
+
+        <div class="character__profile">
+          <header class="sec-head sec-head--left">
+            <p class="sec-head__en">CHARACTER</p>
+            <h2 class="sec-head__ja" id="character-title" data-text="キャラクター">キャラクター</h2>
+          </header>
+          <div class="nameplate">
+            <p class="nameplate__name">クマチ</p>
+            <p class="nameplate__en">KUMACHI</p>
+          </div>
+          <p class="character__catch"><span class="nw">森からやってきた、</span><span class="nw">いたずら好きの女の子。</span></p>
+          <p><span class="nw">お気に入りのクマの着ぐるみを着て、</span><span class="nw">今日も村へいたずらをしにやってくる！</span><br><span class="nw">村にたどり着かれたら最後、</span><span class="nw">いたずらされ放題…!?</span><br><span class="nw">トラップを仕掛けて、</span><span class="nw">クマチを相手の村へ押し込もう！</span></p>
+          <dl class="profile">
+            <div class="profile__row">
+              <dt>すきなもの</dt>
+              <dd>いたずら、<span class="nw">あま〜いハチミツ</span></dd>
+            </div>
+            <div class="profile__row">
+              <dt>にがてなもの</dt>
+              <dd><span class="nw">スズやドラの</span><span class="nw">大きな音</span></dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== HOW TO PLAY ===================== -->
+    <section class="section howto" id="howto" aria-labelledby="howto-title">
+      <div class="container">
+        <header class="sec-head">
+          <p class="sec-head__en">HOW TO PLAY</p>
+          <h2 class="sec-head__ja" id="howto-title" data-text="遊び方">遊び方</h2>
+        </header>
+        <p class="sec-lead"><span class="nw">自分のターンにやることは</span><span class="nw"><strong>「うごかす」</strong>と<strong>「しかける」</strong>の</span><span class="nw">2つだけ！</span><br><span class="nw">交互にくりかえして、</span><span class="nw">クマチを相手の村へ</span><span class="nw">押し込もう。</span></p>
+
+        <div class="howto__grid">
+          <figure class="demo" data-demo>
+            <figcaption class="demo__head">
+              <span class="demo__label">FIELD</span>
+              裏向きのトラップカードを並べたフィールドで、クマチのコマを押し合います。左右のはしが、それぞれの村です。
+            </figcaption>
+            <div class="demo__stage" aria-hidden="true">
+              <div class="village village--them">
+                <svg class="village__icon"><use href="#i-house"></use></svg>
+                <span class="village__name">あいての村</span>
+              </div>
+              <div class="board" data-board>
+                <div class="board__token" data-token>
+                  <img src="assets/img/kumachi-token.webp" width="256" height="208" alt="">
+                </div>
+                <div class="board__pop" data-pop></div>
+              </div>
+              <div class="village village--you">
+                <svg class="village__icon"><use href="#i-house"></use></svg>
+                <span class="village__name">あなたの村</span>
+              </div>
+            </div>
+            <div class="demo__caption">
+              <span class="demo__chip" data-demo-chip>STEP 1</span>
+              <p class="demo__text" data-demo-text>あなたのターン！ クマチを上下左右に1マス動かそう</p>
+            </div>
+            <div class="demo__foot">
+              <p class="demo__note">※動きのイメージです</p>
+              <div class="demo__controls">
+                <button class="btn-mini" type="button" data-demo-toggle>再生</button>
+                <button class="btn-mini" type="button" data-demo-replay>最初から</button>
+              </div>
+            </div>
+          </figure>
+
+          <div class="howto__side">
+            <ol class="steps">
+              <li class="step" data-step="1">
+                <span class="badge step__badge" aria-hidden="true">
+                  <svg class="badge__head"><use href="#i-bearhead"></use></svg>
+                  <span class="badge__num">1</span>
+                </span>
+                <p class="step__en">STEP 1</p>
+                <h3 class="step__title">うごかす</h3>
+                <p class="step__text">クマチを上下左右のどれかに1マス動かして、止まったマスのトラップをめくります。トラップの効果で、クマチが進んだり戻ったり…！</p>
+              </li>
+              <li class="step" data-step="2">
+                <span class="badge step__badge" aria-hidden="true">
+                  <svg class="badge__head"><use href="#i-bearhead"></use></svg>
+                  <span class="badge__num">2</span>
+                </span>
+                <p class="step__en">STEP 2</p>
+                <h3 class="step__title">しかける</h3>
+                <p class="step__text">クマチの上下左右にあるトラップを表にして、おたがいに確認。そのあと相手に見えないように並び替えて、裏向きに置きなおします。</p>
+              </li>
+            </ol>
+            <p class="howto__next">これで相手のターンへ。相手は、あなたが仕掛けたトラップを読みながらクマチを動かします。</p>
+          </div>
+        </div>
+
+        <div class="win">
+          <img class="win__token" src="assets/img/kumachi-token.webp" width="256" height="208" alt="" loading="lazy">
+          <div class="win__body">
+            <p class="win__label">勝利条件</p>
+            <p class="win__text"><span class="nw">クマチを<em>相手の村</em>に</span><span class="nw">押し込んだら勝ち！</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TRAP CARDS ===================== -->
+    <section class="section cards" id="cards" aria-labelledby="cards-title">
+      <div class="container">
+        <header class="sec-head sec-head--on-dark">
+          <p class="sec-head__en">TRAP CARDS</p>
+          <h2 class="sec-head__ja" id="cards-title" data-text="トラップカード">トラップカード</h2>
+        </header>
+        <p class="sec-lead sec-lead--on-dark"><span class="nw">スズやドラの音で</span><span class="nw">クマチを追いはらい、</span><span class="nw">あま〜いハチミツで</span><span class="nw">相手のジャマをしよう！</span></p>
+
+        <div class="trap-groups">
+          <section class="trap-group trap-group--plus" aria-labelledby="plus-title">
+            <div class="trap-group__head">
+              <span class="badge badge--sign" aria-hidden="true">
+                <svg class="badge__head"><use href="#i-bearhead"></use></svg>
+                <span class="badge__num">+</span>
+              </span>
+              <div>
+                <h3 class="trap-group__title" id="plus-title">すすめるトラップ</h3>
+                <p class="trap-group__desc"><span class="nw">めくった人から見て、</span><span class="nw">クマチが<strong>相手の村のほう</strong>へ進む！</span></p>
+              </div>
+            </div>
+            <ul class="trap-list">
+              <li class="trap" style="--tilt:-3deg">
+                <div class="trap__visual">
+                  <img class="trap__img" src="assets/img/card-plus1.webp" width="397" height="397" alt="スズのカード" loading="lazy">
+                  <span class="trap__sfx" aria-hidden="true">チリン♪</span>
+                </div>
+                <div class="trap__body">
+                  <p class="trap__value">+1</p>
+                  <h4 class="trap__name">スズ</h4>
+                  <p class="trap__desc">クマチが1マス進む</p>
+                </div>
+              </li>
+              <li class="trap" style="--tilt:2deg">
+                <div class="trap__visual">
+                  <img class="trap__img" src="assets/img/card-plus2.webp" width="397" height="397" alt="天使のスズのカード" loading="lazy">
+                  <span class="trap__sfx" aria-hidden="true">リンリン♪</span>
+                </div>
+                <div class="trap__body">
+                  <p class="trap__value">+2</p>
+                  <h4 class="trap__name">天使のスズ</h4>
+                  <p class="trap__desc">クマチが2マス進む</p>
+                </div>
+              </li>
+              <li class="trap" style="--tilt:-2deg">
+                <div class="trap__visual">
+                  <img class="trap__img" src="assets/img/card-plus4.webp" width="397" height="397" alt="大ドラのカード" loading="lazy">
+                  <span class="trap__sfx trap__sfx--big" aria-hidden="true">ジャーン！</span>
+                </div>
+                <div class="trap__body">
+                  <p class="trap__value">+4</p>
+                  <h4 class="trap__name">大ドラ</h4>
+                  <p class="trap__desc">クマチが一気に4マス進む！</p>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <section class="trap-group trap-group--minus" aria-labelledby="minus-title">
+            <div class="trap-group__head">
+              <span class="badge badge--sign" aria-hidden="true">
+                <svg class="badge__head"><use href="#i-bearhead"></use></svg>
+                <span class="badge__num">−</span>
+              </span>
+              <div>
+                <h3 class="trap-group__title" id="minus-title">もどるトラップ</h3>
+                <p class="trap-group__desc"><span class="nw">めくった人から見て、</span><span class="nw">クマチが<strong>自分の村のほう</strong>へ</span><span class="nw">戻ってきちゃう…</span></p>
+              </div>
+            </div>
+            <ul class="trap-list">
+              <li class="trap" style="--tilt:2deg">
+                <div class="trap__visual">
+                  <img class="trap__img" src="assets/img/card-minus1.webp" width="397" height="397" alt="ハチミツのカード" loading="lazy">
+                  <span class="trap__sfx" aria-hidden="true">ぺろっ</span>
+                </div>
+                <div class="trap__body">
+                  <p class="trap__value">−1</p>
+                  <h4 class="trap__name">ハチミツ</h4>
+                  <p class="trap__desc">クマチが1マス戻ってくる</p>
+                </div>
+              </li>
+              <li class="trap" style="--tilt:-3deg">
+                <div class="trap__visual">
+                  <img class="trap__img" src="assets/img/card-minus2.webp" width="397" height="397" alt="濃厚なハチミツのカード" loading="lazy">
+                  <span class="trap__sfx" aria-hidden="true">とろ〜り</span>
+                </div>
+                <div class="trap__body">
+                  <p class="trap__value">−2</p>
+                  <h4 class="trap__name">濃厚なハチミツ</h4>
+                  <p class="trap__desc">クマチが2マス戻ってくる</p>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <ul class="notes notes--on-dark">
+          <li>※トラップの効果で移動した先のマスのトラップは発動しません。</li>
+          <li>※カードのデザイン・名称・効果は開発中のものです。</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== POINT ===================== -->
+    <section class="section point" id="point" aria-labelledby="point-title">
+      <div class="container">
+        <header class="sec-head">
+          <p class="sec-head__en">POINT</p>
+          <h2 class="sec-head__ja" id="point-title" data-text="ここがおもしろい！">ここがおもしろい！</h2>
+        </header>
+
+        <ol class="points">
+          <!-- POINT 1 -->
+          <li class="point-item">
+            <div class="point-item__text">
+              <p class="point-item__num"><span>POINT</span>01</p>
+              <h3 class="point-item__title">ルールはかんたん！</h3>
+              <p>自分のターンにやることは「うごかす」と「しかける」の2つだけ。ふだんあまりゲームをしない人でも、すぐに遊べます。</p>
+            </div>
+            <div class="point-item__visual">
+              <div class="actions" aria-hidden="true">
+                <div class="action action--move">
+                  <svg class="action__icon"><use href="#i-paw"></use></svg>
+                  <span class="action__name">うごかす</span>
+                </div>
+                <span class="actions__arrow"></span>
+                <div class="action action--set">
+                  <span class="action__cards"><i></i><i></i></span>
+                  <span class="action__name">しかける</span>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- POINT 2 -->
+          <li class="point-item point-item--wide">
+            <div class="point-item__text">
+              <p class="point-item__num"><span>POINT</span>02</p>
+              <h3 class="point-item__title">裏をかく心理戦！</h3>
+              <p>トラップをどこに仕掛けるかで、結果は大きく変わります。相手の考えを読んで裏をかき、一気にクマチを進められたときの気持ちよさは格別！</p>
+            </div>
+            <div class="mind">
+              <div class="mind__player mind__player--set">
+                <p class="mind__bubble">①に天使のスズを置いたら、一気に3マスも進まれちゃう…！<br>①には濃厚なハチミツを置いておこう。</p>
+                <p class="mind__who"><span class="mind__avatar" aria-hidden="true"></span>しかける人</p>
+              </div>
+              <div class="mind__center">
+                <p class="mind__dir">
+                  <span class="mind__dir-set">しかける人の村</span>
+                  <span class="mind__dir-move">うごかす人の村</span>
+                </p>
+                <div class="mind__grid" aria-hidden="true">
+                  <span class="mind__cell"></span>
+                  <span class="mind__cell is-card"></span>
+                  <span class="mind__cell"></span>
+                  <span class="mind__cell is-card is-one">①</span>
+                  <span class="mind__cell is-kumachi"><img src="assets/img/kumachi-token.webp" width="256" height="208" alt="" loading="lazy"></span>
+                  <span class="mind__cell is-card is-two">②</span>
+                  <span class="mind__cell"></span>
+                  <span class="mind__cell is-card"></span>
+                  <span class="mind__cell"></span>
+                </div>
+                <div class="mind__candidates">
+                  <figure>
+                    <img src="assets/img/card-plus2.webp" width="397" height="397" alt="" loading="lazy">
+                    <figcaption>天使のスズ<br><b>+2</b></figcaption>
+                  </figure>
+                  <span class="mind__or">どっちに<br>どっち？</span>
+                  <figure>
+                    <img src="assets/img/card-minus2.webp" width="397" height="397" alt="" loading="lazy">
+                    <figcaption>濃厚なハチミツ<br><b>−2</b></figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div class="mind__player mind__player--move">
+                <p class="mind__bubble">進まれたくないはずだから、①にハチミツ、②にスズを置いてくるかな…？</p>
+                <p class="mind__who"><span class="mind__avatar" aria-hidden="true"></span>うごかす人</p>
+              </div>
+            </div>
+          </li>
+
+          <!-- POINT 3 -->
+          <li class="point-item point-item--wide">
+            <div class="point-item__text">
+              <p class="point-item__num"><span>POINT</span>03</p>
+              <h3 class="point-item__title">遊ぶほど奥深い！</h3>
+              <p>はじめは「クマチを進める」だけでも楽しい。慣れてくると「相手の裏をかく」「先を読む」…と、上達するほど次の目標が見えてきます。ゲームをする人はもちろん、あまりしない人も楽しめるゲームです。</p>
+            </div>
+            <div class="stairs-wrap">
+              <ol class="stairs">
+                <li class="stairs__step" style="--lv:1"><span class="stairs__lv">1</span><span class="stairs__text">クマチを進める</span></li>
+                <li class="stairs__step" style="--lv:2"><span class="stairs__lv">2</span><span class="stairs__text"><span class="nw">相手のジャマに</span><span class="nw">なるように</span><span class="nw">しかける</span></span></li>
+                <li class="stairs__step" style="--lv:3"><span class="stairs__lv">3</span><span class="stairs__text">相手の裏をかく</span></li>
+                <li class="stairs__step is-deep" style="--lv:4"><span class="stairs__lv">4</span><span class="stairs__text"><span class="nw">先の展開を</span><span class="nw">読んで</span><span class="nw">しかける</span></span></li>
+                <li class="stairs__step is-deep" style="--lv:5"><span class="stairs__lv">5</span><span class="stairs__text"><span class="nw">相手のクセや</span><span class="nw">スタイルを読む</span></span></li>
+              </ol>
+              <div class="stairs__legend">
+                <p class="legend legend--easy">1〜2回遊べば体感できる楽しさ</p>
+                <p class="legend legend--deep">上達すると見えてくる次の目標</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== PRODUCT ===================== -->
+    <section class="section product" id="product" aria-labelledby="product-title">
+      <div class="container product__grid">
+        <div class="product__visual">
+          <img class="product__logo" src="assets/img/logo.webp" width="960" height="537" alt="トラップス" loading="lazy">
+          <img class="product__chara" src="assets/img/kumachi-jump.webp" width="900" height="966" alt="" loading="lazy">
+          <p class="stamp" aria-hidden="true"><span>COMING</span><span>SOON</span></p>
+        </div>
+
+        <div class="product__info">
+          <header class="sec-head sec-head--left">
+            <p class="sec-head__en">PRODUCT</p>
+            <h2 class="sec-head__ja" id="product-title" data-text="商品情報">商品情報</h2>
+          </header>
+          <dl class="spec">
+            <div class="spec__row"><dt>商品名</dt><dd>トラップス</dd></div>
+            <div class="spec__row"><dt>ジャンル</dt><dd>カードゲーム<span class="nw">（アナログゲーム）</span></dd></div>
+            <div class="spec__row"><dt>プレイ人数</dt><dd>2人</dd></div>
+            <div class="spec__row"><dt>発売時期</dt><dd class="is-tbd">未定</dd></div>
+            <div class="spec__row"><dt>価格</dt><dd class="is-tbd">未定</dd></div>
+            <div class="spec__row"><dt>開発・販売</dt><dd>クレアクラン</dd></div>
+          </dl>
+          <p class="product__msg"><span class="nw">発売時期・価格は</span><span class="nw">決まりしだいお知らせします。</span><br>続報をお楽しみに！</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <svg class="bee bee--flip footer__bee" aria-hidden="true"><use href="#i-bee"></use></svg>
+    <div class="container footer__inner">
+      <a class="footer__logo" href="#top"><img src="assets/img/logo.webp" width="960" height="537" alt="トラップス" loading="lazy"></a>
+      <nav class="footer__nav" aria-label="フッターメニュー">
+        <ul>
+          <li><a href="#about">トラップスとは</a></li>
+          <li><a href="#character">キャラクター</a></li>
+          <li><a href="#howto">遊び方</a></li>
+          <li><a href="#cards">トラップカード</a></li>
+          <li><a href="#point">ここがおもしろい</a></li>
+          <li><a href="#product">商品情報</a></li>
+        </ul>
+      </nav>
+      <p class="footer__maker">開発・販売：クレアクラン</p>
+      <p class="footer__note">※本サイトに掲載している内容は開発中のものです。仕様は予告なく変更になる場合があります。</p>
+      <p class="footer__copy"><small>&copy; 2026 クレアクラン</small></p>
+    </div>
+  </footer>
+</body>
+</html>
