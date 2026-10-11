@@ -274,12 +274,32 @@ h1, h2, h3, h4, .sec-lead, .demo__text, .mind__bubble, .character__catch, .trap_
    HEADER
    ========================================================================== */
 .site-header {
-  position: sticky;
+  position: fixed;
   top: env(safe-area-inset-top, 0px);
+  left: 0;
+  right: 0;
   z-index: 50;
   height: var(--header-h);
   background: var(--paper);
   border-bottom: 3px solid var(--ink);
+}
+.header-ready .site-header {
+  transition: transform .35s ease, background-color .25s, border-color .25s;
+}
+.site-header__logo { transition: opacity .25s, visibility .25s; }
+
+/* ページのいちばん上ではヘッダーを隠し、キービジュアルのタイトルを全部見せる。
+   少しスクロールするとヘッダーが出てくる（is-at-top は main.js が付け外しする） */
+.is-at-top:not(.is-menu-open) .site-header:not(:focus-within) {
+  background-color: transparent;
+  border-bottom-color: transparent;
+}
+.is-at-top:not(.is-menu-open) .site-header:not(:focus-within) .site-header__logo {
+  opacity: 0;
+  visibility: hidden;
+}
+@media (min-width: 1024px) {
+  .is-at-top .site-header:not(:focus-within) { transform: translateY(-100%); }
 }
 .site-header__inner {
   display: flex;

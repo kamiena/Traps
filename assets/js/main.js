@@ -4,6 +4,17 @@
 
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
+  /* ---------- ヘッダー：いちばん上では隠し、少しスクロールしたら出す ---------- */
+  const root = document.documentElement;
+  const SHOW_HEADER_AFTER = 60; // px
+  const updateHeader = () => {
+    root.classList.toggle('is-at-top', window.scrollY < SHOW_HEADER_AFTER);
+  };
+  updateHeader();
+  window.addEventListener('scroll', updateHeader, { passive: true });
+  // 最初の表示ではアニメーションさせない
+  requestAnimationFrame(() => requestAnimationFrame(() => root.classList.add('header-ready')));
+
   /* ---------- メニュー（スマホ・タブレット） ---------- */
   const menuToggle = document.querySelector('.menu-toggle');
   const nav = document.getElementById('global-nav');
