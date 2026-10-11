@@ -128,6 +128,43 @@ h1, h2, h3, h4, .sec-lead, .demo__text, .mind__bubble, .character__catch, .trap_
   padding-block: var(--section-pad);
   overflow-x: clip;
 }
+.section > .container { position: relative; z-index: 2; }
+
+/* カード裏の柄（ツボ・スズ・肉球・葉っぱ）を背景に敷く。色はセクションごとに --pattern で指定 */
+.section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-color: var(--pattern, transparent);
+  -webkit-mask: url("../img/pattern-back.webp") 0 0 / var(--pattern-size, 340px) repeat;
+  mask: url("../img/pattern-back.webp") 0 0 / var(--pattern-size, 340px) repeat;
+}
+.about, .howto, .product { --pattern: rgba(232, 196, 142, .34); }
+.character { --pattern: rgba(150, 214, 240, .45); }
+.cards { --pattern: rgba(52, 160, 116, .38); }
+.point { --pattern: rgba(246, 200, 92, .55); }
+
+/* カードのふちと同じ葉っぱ飾り（角に置く） */
+.leaves {
+  position: absolute;
+  z-index: 1;
+  width: var(--leaves-size, clamp(120px, 17vw, 230px));
+  height: auto;
+  aspect-ratio: 200 / 170;
+  overflow: visible;
+  pointer-events: none;
+  animation: sway 6s ease-in-out infinite;
+}
+.leaves--tl { top: 0; left: 0; }
+.leaves--tr { top: 0; right: 0; scale: -1 1; }
+.leaves--bl { bottom: 0; left: 0; scale: 1 -1; }
+.leaves--br { bottom: 0; right: 0; scale: -1 -1; animation-delay: -3s; }
+@keyframes sway {
+  0%, 100% { rotate: 0deg; }
+  50% { rotate: 2.5deg; }
+}
 
 /* ---------- 見出し（ロゴと同じ「こげ茶＋白」の二重フチ） ---------- */
 .sec-head {
@@ -838,8 +875,7 @@ h1, h2, h3, h4, .sec-lead, .demo__text, .mind__bubble, .character__catch, .trap_
   -webkit-backface-visibility: hidden;
 }
 .tile__back {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40' fill='%23ffffff' fill-opacity='.55'%3E%3Cellipse cx='20' cy='27.5' rx='10' ry='8.5'/%3E%3Cellipse cx='8.5' cy='17' rx='4' ry='5' transform='rotate(-20 8.5 17)'/%3E%3Cellipse cx='15.5' cy='10' rx='4' ry='5.2' transform='rotate(-8 15.5 10)'/%3E%3Cellipse cx='24.5' cy='10' rx='4' ry='5.2' transform='rotate(8 24.5 10)'/%3E%3Cellipse cx='31.5' cy='17' rx='4' ry='5' transform='rotate(20 31.5 17)'/%3E%3C/svg%3E") 50% 56% / 56% no-repeat, #6cc75e;
-  box-shadow: inset 0 -3px 0 rgba(13, 77, 54, .35);
+  background: url("../img/card-back.webp") 50% 50% / cover no-repeat, #d4955b;
 }
 .tile__front {
   transform: rotateY(180deg);
@@ -1307,7 +1343,7 @@ h1, h2, h3, h4, .sec-lead, .demo__text, .mind__bubble, .character__catch, .trap_
   inset: 8% 14%;
   border: 2.5px solid var(--ink);
   border-radius: 18%;
-  background: #6cc75e;
+  background: url("../img/card-back.webp") 50% 50% / cover no-repeat, #d4955b;
 }
 .action__cards i:first-child { rotate: -14deg; translate: -14% 0; background: var(--card-peach); }
 .action__cards i:last-child { rotate: 10deg; translate: 14% 4%; }
@@ -1412,8 +1448,7 @@ h1, h2, h3, h4, .sec-lead, .demo__text, .mind__bubble, .character__catch, .trap_
 }
 .mind__cell.is-card {
   border: 2.5px solid var(--ink);
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40' fill='%23ffffff' fill-opacity='.55'%3E%3Cellipse cx='20' cy='27.5' rx='10' ry='8.5'/%3E%3Cellipse cx='8.5' cy='17' rx='4' ry='5' transform='rotate(-20 8.5 17)'/%3E%3Cellipse cx='15.5' cy='10' rx='4' ry='5.2' transform='rotate(-8 15.5 10)'/%3E%3Cellipse cx='24.5' cy='10' rx='4' ry='5.2' transform='rotate(8 24.5 10)'/%3E%3Cellipse cx='31.5' cy='17' rx='4' ry='5' transform='rotate(20 31.5 17)'/%3E%3C/svg%3E") 50% 56% / 52% no-repeat, #6cc75e;
-  box-shadow: inset 0 -3px 0 rgba(13, 77, 54, .35);
+  background: url("../img/card-back.webp") 50% 50% / cover no-repeat, #d4955b;
 }
 .mind__cell.is-one,
 .mind__cell.is-two {
@@ -1683,3 +1718,38 @@ h1, h2, h3, h4, .sec-lead, .demo__text, .mind__bubble, .character__catch, .trap_
     transition-duration: .01ms !important;
   }
 }
+
+/* ==========================================================================
+   葉っぱ飾りの位置
+   ========================================================================== */
+.character .leaves--tl { top: 8px; }
+.howto .leaves--tr { top: 12px; }
+.about .leaves--br,
+.howto .leaves--bl { --leaves-size: clamp(110px, 14vw, 200px); }
+.product .leaves--bl { --leaves-size: clamp(110px, 14vw, 190px); }
+
+.trap-group,
+.point-item { position: relative; overflow: hidden; isolation: isolate; }
+.trap-group > :not(.leaves),
+.point-item > :not(.leaves) { position: relative; z-index: 1; }
+.trap-group .leaves { --leaves-size: clamp(90px, 12vw, 150px); z-index: 0; }
+.trap-group .leaves--bl { --leaves-size: clamp(70px, 8vw, 110px); }
+.product::before { z-index: 1; }
+.point-item .leaves { --leaves-size: clamp(90px, 11vw, 140px); z-index: 0; }
+
+@media (max-width: 599.98px) {
+  .character .leaves--tl,
+  .howto .leaves--tr { --leaves-size: 104px; }
+}
+
+/* 商品情報：クマチのうしろにカード裏 */
+.product__back {
+  position: absolute;
+  z-index: 0;
+  width: 34%;
+  border: 4px solid var(--white);
+  border-radius: 14%;
+  box-shadow: 0 0 0 3px var(--ink), 0 8px 0 rgba(59, 29, 12, .2);
+}
+.product__back--1 { right: 2%; top: 30%; rotate: 14deg; }
+.product__back--2 { right: 22%; top: 40%; rotate: -8deg; }
