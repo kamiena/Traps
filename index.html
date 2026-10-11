@@ -23,13 +23,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Mochiy+Pop+One&family=Zen+Maru+Gothic:wght@500;700;900&display=swap">
-  <link rel="stylesheet" href="assets/css/style.css?v=20261011d">
-  <script src="assets/js/main.js?v=20261011d" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=20261011e">
+  <script src="assets/js/main.js?v=20261011e" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">本文へスキップ</a>
 
-  <!-- 使い回すイラスト（ハチ・クマの顔・家・肉球・雲） -->
+  <!-- 使い回すイラスト（ハチ・クマの顔・家・肉球） -->
   <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
     <defs>
       <clipPath id="bee-body-clip"><ellipse cx="56" cy="44" rx="20" ry="15.2"/></clipPath>
@@ -121,14 +121,6 @@
       <ellipse cx="24.5" cy="10" rx="4" ry="5.2" transform="rotate(8 24.5 10)"/>
       <ellipse cx="31.5" cy="17" rx="4" ry="5" transform="rotate(20 31.5 17)"/>
     </symbol>
-    <symbol id="i-cloud" viewBox="0 0 200 100">
-      <g fill="#bfe8fb">
-        <circle cx="60" cy="62" r="29"/><circle cx="101" cy="51" r="39"/><circle cx="145" cy="62" r="29"/><rect x="38" y="62" width="130" height="31" rx="15.5"/>
-      </g>
-      <g fill="#ffffff">
-        <circle cx="60" cy="56" r="27"/><circle cx="101" cy="45" r="37"/><circle cx="144" cy="57" r="26"/><rect x="38" y="56" width="128" height="28" rx="14"/>
-      </g>
-    </symbol>
   </svg>
 
   <header class="site-header">
@@ -161,48 +153,12 @@
     <section class="hero" id="top" aria-labelledby="hero-title">
       <h1 class="visually-hidden" id="hero-title">トラップス：いたずら好きなクマチから村を守る、2人対戦カードゲーム</h1>
 
-      <!-- PC・タブレット：キービジュアルを額縁に入れて1画面に収める -->
-      <div class="hero__pc">
-        <svg class="hero__pc-cloud hero__pc-cloud--1" aria-hidden="true"><use href="#i-cloud"></use></svg>
-        <svg class="hero__pc-cloud hero__pc-cloud--2" aria-hidden="true"><use href="#i-cloud"></use></svg>
-        <svg class="hero__pc-cloud hero__pc-cloud--3" aria-hidden="true"><use href="#i-cloud"></use></svg>
-        <svg class="hero__pc-hills" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true">
-          <path d="M0 58C70 20 150 26 215 48S350 28 400 40V120H0Z" fill="#187050"/>
-          <path d="M0 84C90 58 190 66 255 80S355 70 400 76V120H0Z" fill="#5ccf6a"/>
-        </svg>
-        <div class="hero__frame">
-          <picture class="hero__kv">
-            <source media="(max-width: 767.98px)" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
-            <source type="image/webp" srcset="assets/img/kv-1280.webp 1280w, assets/img/kv-1920.webp 1920w" sizes="min(1320px, 92vw)">
-            <img src="assets/img/kv-1920.webp" width="1920" height="1080" fetchpriority="high"
-                 alt="トラップスのキービジュアル。クマの着ぐるみを着たクマチが、ハチミツのツボとハチが飛ぶ森の道を駆けてくる">
-          </picture>
-          <svg class="leaves leaves--tl hero__leaves" aria-hidden="true"><use href="#i-leaves"></use></svg>
-          <svg class="leaves leaves--br hero__leaves" aria-hidden="true"><use href="#i-leaves"></use></svg>
-          <svg class="bee hero__pc-bee hero__pc-bee--1" aria-hidden="true"><use href="#i-bee"></use></svg>
-          <svg class="bee bee--flip hero__pc-bee hero__pc-bee--2" aria-hidden="true"><use href="#i-bee"></use></svg>
-        </div>
-      </div>
-
-      <!-- スマホ：ロゴとクマチを組み合わせた縦長レイアウト -->
-      <div class="hero__sp">
-        <svg class="hero__cloud hero__cloud--1" aria-hidden="true"><use href="#i-cloud"></use></svg>
-        <svg class="hero__cloud hero__cloud--2" aria-hidden="true"><use href="#i-cloud"></use></svg>
-        <img class="hero__logo" src="assets/img/logo.webp" alt="トラップス" width="960" height="537">
-        <p class="hero__tag">2人対戦カードゲーム</p>
-        <div class="hero__chara">
-          <picture>
-            <source media="(min-width: 768px)" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
-            <img src="assets/img/kumachi-jump.webp" width="900" height="966" alt="両手をあげて飛びはねるクマチ">
-          </picture>
-        </div>
-        <svg class="bee hero__bee hero__bee--1" aria-hidden="true"><use href="#i-bee"></use></svg>
-        <svg class="bee bee--flip hero__bee hero__bee--2" aria-hidden="true"><use href="#i-bee"></use></svg>
-        <svg class="hero__hills" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true">
-          <path d="M0 58C70 20 150 26 215 48S350 28 400 40V120H0Z" fill="#187050"/>
-          <path d="M0 84C90 58 190 66 255 80S355 70 400 76V120H0Z" fill="#5ccf6a"/>
-        </svg>
-      </div>
+      <!-- キービジュアル（すべての画面で横幅いっぱいに表示） -->
+      <picture class="hero__kv">
+        <source type="image/webp" srcset="assets/img/kv-1280.webp 1280w, assets/img/kv-1920.webp 1920w" sizes="100vw">
+        <img src="assets/img/kv-1920.webp" width="1920" height="1080" fetchpriority="high"
+             alt="トラップスのキービジュアル。クマの着ぐるみを着たクマチが、ハチミツのツボとハチが飛ぶ森の道を駆けてくる">
+      </picture>
 
       <div class="hedge" aria-hidden="true"></div>
     </section>
