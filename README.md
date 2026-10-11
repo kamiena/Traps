@@ -37,13 +37,14 @@ python3 -m http.server 8000
 
 `index.html` をダブルクリックして開いても表示できます。
 
-## 公開する（GitHub Pages の例）
+## 公開（GitHub Pages）
 
-1. GitHub のリポジトリで **Settings → Pages** を開く
-2. **Source** を「Deploy from a branch」、ブランチを公開したいブランチ・フォルダを `/ (root)` にして保存
-3. 数分後に表示される URL で公開されます
+公開URL：https://kamiena.github.io/Traps/
 
-公開 URL が決まったら、`index.html` の `og:image` を `https://〜/assets/img/ogp.jpg` のような絶対 URL に書き換えてください（SNS のシェア画像に必要です）。
+`main` ブランチの内容がそのまま公開されます（Settings → Pages で「Deploy from a branch」・`main`・`/ (root)` を選択）。
+`main` に push すると、数分で公開サイトに反映されます。
+
+独自ドメインに移すときは、`index.html` の `canonical` / `og:url` / `og:image` の URL も書き換えてください（SNS のシェア画像に必要です）。
 
 ## よく変更しそうな箇所
 
