@@ -25,7 +25,7 @@ apple-touch-icon.png    スマホのホーム画面アイコン
 | `kumachi-token.webp` | クマチのコマ（遊び方デモ・勝利条件で使用） |
 | `card-plus1.webp` 〜 `card-minus2.webp` | トラップカード5種（+1 / +2 / +4 / −1 / −2） |
 | `ogp.jpg` | SNSでシェアされたときの画像（1200×630） |
-| `card-back.webp` | カード裏面（遊び方デモの裏向きカードなど） |
+| `card-back.webp` / `card-back-soft.webp` | カード裏面（通常／遊び方デモ用に色を薄くしたもの） |
 | `pattern-back.webp` | カード裏の柄から作った背景模様（透過。色はCSSの `--pattern` で指定） |
 
 カード画像は角丸なしの正方形で保存し、サイト上で角丸にしています。

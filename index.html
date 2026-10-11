@@ -91,6 +91,42 @@
       <use href="#i-leaf" width="58" height="29" transform="translate(134 10) rotate(-12)"/>
       <use href="#i-acorn" x="112" y="42" width="24" height="30"/>
     </symbol>
+    <!-- 草むら・足あと（背景の飾り） -->
+    <symbol id="i-grass" viewBox="0 0 220 110">
+      <path d="M107.0 110Q109.7 65.4 96.4 28.9Q105.5 69.4 119.0 110Z" fill="#44b85a"/>
+      <path d="M118.1 110Q122.7 72.3 117.4 41.4Q121.0 75.7 129.9 110Z" fill="#6fd884"/>
+      <path d="M140.7 110Q145.2 74.6 142.2 45.6Q144.3 77.8 151.3 110Z" fill="#6fd884"/>
+      <path d="M162.9 110Q170.1 75.4 178.3 47.1Q172.7 78.6 173.1 110Z" fill="#6fd884"/>
+      <path d="M73.1 110Q78.9 76.3 74.6 48.8Q77.6 79.4 86.9 110Z" fill="#6fd884"/>
+      <path d="M151.8 110Q156.5 78.6 154.6 53.0Q155.9 81.5 162.2 110Z" fill="#44b85a"/>
+      <path d="M183.0 110Q187.8 80.5 179.0 56.4Q185.0 83.2 197.0 110Z" fill="#6fd884"/>
+      <path d="M172.3 110Q179.3 82.1 180.3 59.3Q179.6 84.6 185.7 110Z" fill="#44b85a"/>
+      <path d="M53.2 110Q61.4 83.2 75.0 61.3Q65.6 85.6 62.8 110Z" fill="#6fd884"/>
+      <path d="M42.3 110Q42.5 84.4 24.6 63.5Q36.9 86.7 51.7 110Z" fill="#44b85a"/>
+      <path d="M96.7 110Q98.0 85.6 82.1 65.6Q93.1 87.8 107.3 110Z" fill="#6fd884"/>
+      <path d="M62.1 110Q70.3 86.8 75.6 67.8Q72.0 88.9 75.9 110Z" fill="#44b85a"/>
+      <path d="M85.8 110Q94.7 89.3 109.6 72.4Q99.4 91.2 96.2 110Z" fill="#44b85a"/>
+      <path d="M130.0 110Q130.4 89.4 112.1 72.6Q124.7 91.3 140.0 110Z" fill="#44b85a"/>
+      <path d="M7.9 110Q10.4 90.8 -4.2 75.0Q5.8 92.5 20.1 110Z" fill="#6fd884"/>
+      <path d="M31.4 110Q36.1 93.8 36.4 80.6Q36.2 95.3 40.6 110Z" fill="#6fd884"/>
+      <path d="M194.6 110Q200.1 94.1 196.7 81.2Q199.1 95.6 207.4 110Z" fill="#44b85a"/>
+      <path d="M19.6 110Q25.4 94.5 26.9 81.8Q25.8 95.9 30.4 110Z" fill="#44b85a"/>
+      <use href="#i-leaf" width="58" height="29" transform="translate(150 96) rotate(-34)"/>
+      <use href="#i-leaf" width="50" height="25" transform="translate(70 104) rotate(-148) scale(1 -1)"/>
+    </symbol>
+    <symbol id="i-trail" viewBox="0 0 640 200">
+      <use href="#i-paw" width="34" height="34" transform="translate(24.6 112.2) rotate(65.5) translate(-17 -17)"/>
+      <use href="#i-paw" width="34" height="34" transform="translate(92.9 110.5) rotate(67.6) translate(-17 -17)"/>
+      <use href="#i-paw" width="34" height="34" transform="translate(142.4 65.3) rotate(73.8) translate(-17 -17)"/>
+      <use href="#i-paw" width="34" height="34" transform="translate(205.5 78.8) rotate(83.5) translate(-17 -17)"/>
+      <use href="#i-paw" width="34" height="34" transform="translate(263.1 52.1) rotate(94.9) translate(-17 -17)"/>
+      <use href="#i-paw" width="34" height="34" transform="translate(316.6 88.0) rotate(105.0) translate(-17 -17)"/>
+      <use href="#i-paw" width="34" height="34" transform="translate(382.8 83.0) rotate(111.7) translate(-17 -17)"/>
+      <use href="#i-paw" width="34" height="34" transform="translate(430.6 132.1) rotate(114.4) translate(-17 -17)"/>
+      <use href="#i-paw" width="34" height="34" transform="translate(499.1 134.1) rotate(112.9) translate(-17 -17)"/>
+      <use href="#i-paw" width="34" height="34" transform="translate(548.1 180.2) rotate(107.3) translate(-17 -17)"/>
+      <use href="#i-paw" width="34" height="34" transform="translate(611.8 168.2) rotate(98.0) translate(-17 -17)"/>
+    </symbol>
     <symbol id="i-paw" viewBox="0 0 40 40">
       <ellipse cx="20" cy="27.5" rx="10" ry="8.5"/>
       <ellipse cx="8.5" cy="17" rx="4" ry="5" transform="rotate(-20 8.5 17)"/>
@@ -242,8 +278,8 @@
 
     <!-- ===================== HOW TO PLAY ===================== -->
     <section class="section howto" id="howto" aria-labelledby="howto-title">
-      <svg class="leaves leaves--tr" aria-hidden="true"><use href="#i-leaves"></use></svg>
-      <svg class="leaves leaves--bl" aria-hidden="true"><use href="#i-leaves"></use></svg>
+      <svg class="trail trail--1" aria-hidden="true"><use href="#i-trail"></use></svg>
+      <svg class="trail trail--2" aria-hidden="true"><use href="#i-trail"></use></svg>
       <div class="container">
         <header class="sec-head">
           <p class="sec-head__en">HOW TO PLAY</p>
@@ -323,6 +359,8 @@
 
     <!-- ===================== TRAP CARDS ===================== -->
     <section class="section cards" id="cards" aria-labelledby="cards-title">
+      <svg class="grass grass--l" aria-hidden="true"><use href="#i-grass"></use></svg>
+      <svg class="grass grass--r" aria-hidden="true"><use href="#i-grass"></use></svg>
       <div class="container">
         <header class="sec-head sec-head--on-dark">
           <p class="sec-head__en">TRAP CARDS</p>
@@ -536,7 +574,8 @@
 
     <!-- ===================== PRODUCT ===================== -->
     <section class="section product" id="product" aria-labelledby="product-title">
-      <svg class="leaves leaves--bl" aria-hidden="true"><use href="#i-leaves"></use></svg>
+      <svg class="grass grass--l" aria-hidden="true"><use href="#i-grass"></use></svg>
+      <svg class="grass grass--r" aria-hidden="true"><use href="#i-grass"></use></svg>
       <div class="container product__grid">
         <div class="product__visual">
           <img class="product__logo" src="assets/img/logo.webp" width="960" height="537" alt="トラップス" loading="lazy">

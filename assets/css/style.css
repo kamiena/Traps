@@ -141,9 +141,8 @@ h1, h2, h3, h4, .sec-lead, .demo__text, .mind__bubble, .character__catch, .trap_
   -webkit-mask: url("../img/pattern-back.webp") 0 0 / var(--pattern-size, 340px) repeat;
   mask: url("../img/pattern-back.webp") 0 0 / var(--pattern-size, 340px) repeat;
 }
-.about, .howto, .product { --pattern: rgba(232, 196, 142, .34); }
-.character { --pattern: rgba(150, 214, 240, .45); }
-.cards { --pattern: rgba(52, 160, 116, .38); }
+/* 模様を敷くのは ABOUT と POINT だけ。ほかは草むら・足あと・葉っぱで変化をつける */
+.about { --pattern: rgba(232, 196, 142, .34); }
 .point { --pattern: rgba(246, 200, 92, .55); }
 
 /* カードのふちと同じ葉っぱ飾り（角に置く） */
@@ -875,7 +874,7 @@ h1, h2, h3, h4, .sec-lead, .demo__text, .mind__bubble, .character__catch, .trap_
   -webkit-backface-visibility: hidden;
 }
 .tile__back {
-  background: url("../img/card-back.webp") 50% 50% / cover no-repeat, #d4955b;
+  background: url("../img/card-back-soft.webp") 50% 50% / cover no-repeat, #ead0ad;
 }
 .tile__front {
   transform: rotateY(180deg);
@@ -1343,7 +1342,7 @@ h1, h2, h3, h4, .sec-lead, .demo__text, .mind__bubble, .character__catch, .trap_
   inset: 8% 14%;
   border: 2.5px solid var(--ink);
   border-radius: 18%;
-  background: url("../img/card-back.webp") 50% 50% / cover no-repeat, #d4955b;
+  background: url("../img/card-back-soft.webp") 50% 50% / cover no-repeat, #ead0ad;
 }
 .action__cards i:first-child { rotate: -14deg; translate: -14% 0; background: var(--card-peach); }
 .action__cards i:last-child { rotate: 10deg; translate: 14% 4%; }
@@ -1448,7 +1447,7 @@ h1, h2, h3, h4, .sec-lead, .demo__text, .mind__bubble, .character__catch, .trap_
 }
 .mind__cell.is-card {
   border: 2.5px solid var(--ink);
-  background: url("../img/card-back.webp") 50% 50% / cover no-repeat, #d4955b;
+  background: url("../img/card-back-soft.webp") 50% 50% / cover no-repeat, #ead0ad;
 }
 .mind__cell.is-one,
 .mind__cell.is-two {
@@ -1723,10 +1722,7 @@ h1, h2, h3, h4, .sec-lead, .demo__text, .mind__bubble, .character__catch, .trap_
    葉っぱ飾りの位置
    ========================================================================== */
 .character .leaves--tl { top: 8px; }
-.howto .leaves--tr { top: 12px; }
-.about .leaves--br,
-.howto .leaves--bl { --leaves-size: clamp(110px, 14vw, 200px); }
-.product .leaves--bl { --leaves-size: clamp(110px, 14vw, 190px); }
+.about .leaves--br { --leaves-size: clamp(110px, 14vw, 200px); }
 
 .trap-group,
 .point-item { position: relative; overflow: hidden; isolation: isolate; }
@@ -1738,8 +1734,7 @@ h1, h2, h3, h4, .sec-lead, .demo__text, .mind__bubble, .character__catch, .trap_
 .point-item .leaves { --leaves-size: clamp(90px, 11vw, 140px); z-index: 0; }
 
 @media (max-width: 599.98px) {
-  .character .leaves--tl,
-  .howto .leaves--tr { --leaves-size: 104px; }
+  .character .leaves--tl { --leaves-size: 104px; }
 }
 
 /* 商品情報：クマチのうしろにカード裏 */
@@ -1753,3 +1748,34 @@ h1, h2, h3, h4, .sec-lead, .demo__text, .mind__bubble, .character__catch, .trap_
 }
 .product__back--1 { right: 2%; top: 30%; rotate: 14deg; }
 .product__back--2 { right: 22%; top: 40%; rotate: -8deg; }
+
+/* 草むら（セクションの下の左右） */
+.grass {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  width: clamp(150px, 20vw, 280px);
+  height: auto;
+  aspect-ratio: 220 / 110;
+  pointer-events: none;
+}
+.grass--l { left: -12px; }
+.grass--r { right: -12px; scale: -1 1; }
+.cards .grass { bottom: 34px; }
+.product .grass { bottom: 40px; }
+@media (max-width: 599.98px) {
+  .grass { width: 130px; }
+}
+
+/* 足あと（クマチが歩いていったあと） */
+.trail {
+  position: absolute;
+  z-index: 1;
+  width: min(78vw, 680px);
+  height: auto;
+  aspect-ratio: 640 / 200;
+  fill: rgba(150, 98, 52, .2);
+  pointer-events: none;
+}
+.trail--1 { left: -6%; bottom: 4%; rotate: -6deg; }
+.trail--2 { right: -8%; top: 7%; scale: -1 1; rotate: 8deg; }
