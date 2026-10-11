@@ -420,8 +420,8 @@ h1, h2, h3, h4, .sec-lead, .demo__text, .mind__bubble, .character__catch, .trap_
   background: linear-gradient(180deg, #4fcff6 0%, #8fe2fb 58%, #c8f1ff 100%);
 }
 .hero__frame {
-  --kv-w: min(100% - 96px, calc((100vh - var(--header-h) - 230px) * 16 / 9), 1000px);
-  --kv-w: min(100% - 96px, calc((100svh - var(--header-h) - 230px) * 16 / 9), 1000px);
+  --kv-w: min(100% - 96px, calc((100vh - var(--header-h) - 160px) * 16 / 9), 1320px);
+  --kv-w: min(100% - 96px, calc((100svh - var(--header-h) - 160px) * 16 / 9), 1320px);
   position: relative;
   z-index: 2;
   width: max(var(--kv-w), min(100% - 96px, 560px));
