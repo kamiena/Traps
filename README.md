@@ -48,6 +48,11 @@ python3 -m http.server 8000
 
 独自ドメインに移すときは、`index.html` の `canonical` / `og:url` / `og:image` の URL も書き換えてください（SNS のシェア画像に必要です）。
 
+## 更新するときの注意
+
+`index.html` の `style.css?v=…` と `main.js?v=…` の数字は、CSS や JS を変えたら毎回書き換えてください（例：`v=20261011c` → `v=20261012a`）。
+そのままだと、見に来た人のブラウザに古い CSS が残り、新しい HTML と組み合わさって表示が崩れることがあります。
+
 ## よく変更しそうな箇所
 
 - **発売時期・価格**：`index.html` の「商品情報」（`class="spec"`）の「未定」を書き換え

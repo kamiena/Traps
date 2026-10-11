@@ -23,8 +23,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Mochiy+Pop+One&family=Zen+Maru+Gothic:wght@500;700;900&display=swap">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <script src="assets/js/main.js" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=20261011c">
+  <script src="assets/js/main.js?v=20261011c" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">本文へスキップ</a>
@@ -81,7 +81,7 @@
       <rect x="13.5" y="1" width="3" height="7" rx="1.5" fill="#7a4220"/>
     </symbol>
     <!-- カードのふちの葉っぱ（左上の角用。向きはCSSで反転） -->
-    <symbol id="i-leaves" viewBox="0 0 200 170">
+    <symbol id="i-leaves" viewBox="0 0 200 170" style="overflow: visible">
       <path d="M14 104c22 6 34 22 30 40-3 12-15 14-19 6" fill="none" stroke="#56c266" stroke-width="3.5" stroke-linecap="round"/>
       <use href="#i-leaf" width="70" height="35" transform="translate(4 78) rotate(52)"/>
       <use href="#i-leaf" width="100" height="50" transform="translate(-2 14) rotate(30)"/>
@@ -91,28 +91,15 @@
       <use href="#i-leaf" width="58" height="29" transform="translate(134 10) rotate(-12)"/>
       <use href="#i-acorn" x="112" y="42" width="24" height="30"/>
     </symbol>
-    <!-- 草むら・足あと（背景の飾り） -->
-    <symbol id="i-grass" viewBox="0 0 220 110">
-      <path d="M107.0 110Q109.7 65.4 96.4 28.9Q105.5 69.4 119.0 110Z" fill="#44b85a"/>
-      <path d="M118.1 110Q122.7 72.3 117.4 41.4Q121.0 75.7 129.9 110Z" fill="#6fd884"/>
-      <path d="M140.7 110Q145.2 74.6 142.2 45.6Q144.3 77.8 151.3 110Z" fill="#6fd884"/>
-      <path d="M162.9 110Q170.1 75.4 178.3 47.1Q172.7 78.6 173.1 110Z" fill="#6fd884"/>
-      <path d="M73.1 110Q78.9 76.3 74.6 48.8Q77.6 79.4 86.9 110Z" fill="#6fd884"/>
-      <path d="M151.8 110Q156.5 78.6 154.6 53.0Q155.9 81.5 162.2 110Z" fill="#44b85a"/>
-      <path d="M183.0 110Q187.8 80.5 179.0 56.4Q185.0 83.2 197.0 110Z" fill="#6fd884"/>
-      <path d="M172.3 110Q179.3 82.1 180.3 59.3Q179.6 84.6 185.7 110Z" fill="#44b85a"/>
-      <path d="M53.2 110Q61.4 83.2 75.0 61.3Q65.6 85.6 62.8 110Z" fill="#6fd884"/>
-      <path d="M42.3 110Q42.5 84.4 24.6 63.5Q36.9 86.7 51.7 110Z" fill="#44b85a"/>
-      <path d="M96.7 110Q98.0 85.6 82.1 65.6Q93.1 87.8 107.3 110Z" fill="#6fd884"/>
-      <path d="M62.1 110Q70.3 86.8 75.6 67.8Q72.0 88.9 75.9 110Z" fill="#44b85a"/>
-      <path d="M85.8 110Q94.7 89.3 109.6 72.4Q99.4 91.2 96.2 110Z" fill="#44b85a"/>
-      <path d="M130.0 110Q130.4 89.4 112.1 72.6Q124.7 91.3 140.0 110Z" fill="#44b85a"/>
-      <path d="M7.9 110Q10.4 90.8 -4.2 75.0Q5.8 92.5 20.1 110Z" fill="#6fd884"/>
-      <path d="M31.4 110Q36.1 93.8 36.4 80.6Q36.2 95.3 40.6 110Z" fill="#6fd884"/>
-      <path d="M194.6 110Q200.1 94.1 196.7 81.2Q199.1 95.6 207.4 110Z" fill="#44b85a"/>
-      <path d="M19.6 110Q25.4 94.5 26.9 81.8Q25.8 95.9 30.4 110Z" fill="#44b85a"/>
-      <use href="#i-leaf" width="58" height="29" transform="translate(150 96) rotate(-34)"/>
-      <use href="#i-leaf" width="50" height="25" transform="translate(70 104) rotate(-148) scale(1 -1)"/>
+    <!-- 草・足あと（背景の飾り） -->
+    <symbol id="i-tuft" viewBox="0 0 120 64">
+      <g stroke-linejoin="round" stroke-width="5">
+        <path d="M22 64Q20 44 8 30Q28 38 34 64Z" fill="#44b85a" stroke="#44b85a"/>
+        <path d="M86 64Q90 42 108 32Q96 46 98 64Z" fill="#44b85a" stroke="#44b85a"/>
+        <path d="M36 64Q36 34 30 14Q50 34 50 64Z" fill="#6fd884" stroke="#6fd884"/>
+        <path d="M70 64Q72 36 88 20Q82 42 84 64Z" fill="#6fd884" stroke="#6fd884"/>
+        <path d="M48 64Q52 30 60 6Q68 30 72 64Z" fill="#56c266" stroke="#56c266"/>
+      </g>
     </symbol>
     <symbol id="i-trail" viewBox="0 0 640 200">
       <use href="#i-paw" width="34" height="34" transform="translate(24.6 112.2) rotate(65.5) translate(-17 -17)"/>
@@ -374,8 +361,6 @@
 
     <!-- ===================== TRAP CARDS ===================== -->
     <section class="section cards" id="cards" aria-labelledby="cards-title">
-      <svg class="grass grass--l" aria-hidden="true"><use href="#i-grass"></use></svg>
-      <svg class="grass grass--r" aria-hidden="true"><use href="#i-grass"></use></svg>
       <div class="container">
         <header class="sec-head sec-head--on-dark">
           <p class="sec-head__en">TRAP CARDS</p>
@@ -384,9 +369,9 @@
         <p class="sec-lead sec-lead--on-dark"><span class="nw">スズやドラの音で</span><span class="nw">クマチを追いはらい、</span><span class="nw">あま〜いハチミツで</span><span class="nw">相手のジャマをしよう！</span></p>
 
         <div class="trap-groups">
+          <svg class="leaves leaves--tl" aria-hidden="true"><use href="#i-leaves"></use></svg>
+          <svg class="leaves leaves--br" aria-hidden="true"><use href="#i-leaves"></use></svg>
           <section class="trap-group trap-group--plus" aria-labelledby="plus-title">
-            <svg class="leaves leaves--tr" aria-hidden="true"><use href="#i-leaves"></use></svg>
-            <svg class="leaves leaves--bl" aria-hidden="true"><use href="#i-leaves"></use></svg>
             <div class="trap-group__head">
               <span class="badge badge--sign" aria-hidden="true">
                 <svg class="badge__head"><use href="#i-bearhead"></use></svg>
@@ -435,8 +420,6 @@
           </section>
 
           <section class="trap-group trap-group--minus" aria-labelledby="minus-title">
-            <svg class="leaves leaves--tr" aria-hidden="true"><use href="#i-leaves"></use></svg>
-            <svg class="leaves leaves--bl" aria-hidden="true"><use href="#i-leaves"></use></svg>
             <div class="trap-group__head">
               <span class="badge badge--sign" aria-hidden="true">
                 <svg class="badge__head"><use href="#i-bearhead"></use></svg>
@@ -489,10 +472,12 @@
           <h2 class="sec-head__ja" id="point-title" data-text="ここがおもしろい！">ここがおもしろい！</h2>
         </header>
 
+        <div class="points-wrap">
+          <svg class="leaves leaves--tl" aria-hidden="true"><use href="#i-leaves"></use></svg>
+          <svg class="leaves leaves--br" aria-hidden="true"><use href="#i-leaves"></use></svg>
         <ol class="points">
           <!-- POINT 1 -->
           <li class="point-item">
-            <svg class="leaves leaves--tr" aria-hidden="true"><use href="#i-leaves"></use></svg>
             <div class="point-item__text">
               <p class="point-item__num"><span>POINT</span>01</p>
               <h3 class="point-item__title">ルールはかんたん！</h3>
@@ -515,7 +500,6 @@
 
           <!-- POINT 2 -->
           <li class="point-item point-item--wide">
-            <svg class="leaves leaves--tr" aria-hidden="true"><use href="#i-leaves"></use></svg>
             <div class="point-item__text">
               <p class="point-item__num"><span>POINT</span>02</p>
               <h3 class="point-item__title">裏をかく心理戦！</h3>
@@ -563,7 +547,6 @@
 
           <!-- POINT 3 -->
           <li class="point-item point-item--wide">
-            <svg class="leaves leaves--tr" aria-hidden="true"><use href="#i-leaves"></use></svg>
             <div class="point-item__text">
               <p class="point-item__num"><span>POINT</span>03</p>
               <h3 class="point-item__title">遊ぶほど奥深い！</h3>
@@ -584,18 +567,19 @@
             </div>
           </li>
         </ol>
+        </div>
       </div>
     </section>
 
     <!-- ===================== PRODUCT ===================== -->
     <section class="section product" id="product" aria-labelledby="product-title">
-      <svg class="grass grass--l" aria-hidden="true"><use href="#i-grass"></use></svg>
-      <svg class="grass grass--r" aria-hidden="true"><use href="#i-grass"></use></svg>
+      <svg class="tuft tuft--1" aria-hidden="true"><use href="#i-tuft"></use></svg>
+      <svg class="tuft tuft--2" aria-hidden="true"><use href="#i-tuft"></use></svg>
+      <svg class="tuft tuft--3" aria-hidden="true"><use href="#i-tuft"></use></svg>
+      <svg class="tuft tuft--4" aria-hidden="true"><use href="#i-tuft"></use></svg>
       <div class="container product__grid">
         <div class="product__visual">
           <img class="product__logo" src="assets/img/logo.webp" width="960" height="537" alt="トラップス" loading="lazy">
-          <img class="product__back product__back--1" src="assets/img/card-back.webp" width="320" height="320" alt="" loading="lazy">
-          <img class="product__back product__back--2" src="assets/img/card-back.webp" width="320" height="320" alt="" loading="lazy">
           <img class="product__chara" src="assets/img/kumachi-jump.webp" width="900" height="966" alt="" loading="lazy">
           <p class="stamp" aria-hidden="true"><span>COMING</span><span>SOON</span></p>
         </div>
