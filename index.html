@@ -23,8 +23,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Mochiy+Pop+One&family=Zen+Maru+Gothic:wght@500;700;900&display=swap">
-  <link rel="stylesheet" href="assets/css/style.css?v=20261011f">
-  <script src="assets/js/main.js?v=20261011f" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=20261108a">
+  <script src="assets/js/main.js?v=20261108a" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">本文へスキップ</a>
@@ -157,7 +157,7 @@
       <picture class="hero__kv">
         <source type="image/webp" srcset="assets/img/kv-1280.webp 1280w, assets/img/kv-1920.webp 1920w" sizes="100vw">
         <img src="assets/img/kv-1920.webp" width="1920" height="1080" fetchpriority="high"
-             alt="トラップスのキービジュアル。クマの着ぐるみを着たクマチが、ハチミツのツボとハチが飛ぶ森の道を駆けてくる">
+             alt="トラップスのキービジュアル。クマチが、ハチミツのツボとハチが飛ぶ森の道を駆けてくる">
       </picture>
 
       <div class="hedge" aria-hidden="true"></div>
@@ -203,7 +203,7 @@
       <div class="container character__grid">
         <div class="character__visual">
           <div class="character__halo" aria-hidden="true"></div>
-          <img class="character__img" src="assets/img/kumachi-stand.webp" width="760" height="1004" alt="クマの着ぐるみを着て、にやりと笑うクマチ" loading="lazy">
+          <img class="character__img" src="assets/img/kumachi-stand.webp" width="760" height="1004" alt="にやりと笑うクマチ" loading="lazy">
           <p class="character__bubble">いたずら<br>しちゃうぞ〜♪</p>
           <svg class="bee character__bee character__bee--1" aria-hidden="true"><use href="#i-bee"></use></svg>
           <svg class="bee bee--flip character__bee character__bee--2" aria-hidden="true"><use href="#i-bee"></use></svg>
@@ -219,7 +219,7 @@
             <p class="nameplate__en">KUMACHI</p>
           </div>
           <p class="character__catch"><span class="nw">森からやってきた、</span><span class="nw">いたずら好きの女の子。</span></p>
-          <p><span class="nw">お気に入りのクマの着ぐるみを着て、</span><span class="nw">今日も村へいたずらをしにやってくる！</span><br><span class="nw">村にたどり着かれたら最後、</span><span class="nw">いたずらされ放題…!?</span><br><span class="nw">トラップを仕掛けて、</span><span class="nw">クマチを相手の村へ押し込もう！</span></p>
+          <p><span class="nw">今日もどこかの村へ、</span><span class="nw">いたずらをしにやってくる！</span><br><span class="nw">村にたどり着かれたら最後、</span><span class="nw">いたずらされ放題…!?</span><br><span class="nw">トラップを仕掛けて、</span><span class="nw">クマチを相手の村へ押し込もう！</span></p>
           <dl class="profile">
             <div class="profile__row">
               <dt>すきなもの</dt>
@@ -258,7 +258,7 @@
               </div>
               <div class="board" data-board>
                 <div class="board__token" data-token>
-                  <img src="assets/img/kumachi-token.webp" width="256" height="208" alt="">
+                  <img src="assets/img/kumachi-token.webp" width="256" height="256" alt="">
                 </div>
                 <div class="board__pop" data-pop></div>
               </div>
@@ -306,7 +306,7 @@
         </div>
 
         <div class="win">
-          <img class="win__token" src="assets/img/kumachi-token.webp" width="256" height="208" alt="" loading="lazy">
+          <img class="win__token" src="assets/img/kumachi-token.webp" width="256" height="256" alt="" loading="lazy">
           <div class="win__body">
             <p class="win__label">勝利条件</p>
             <p class="win__text"><span class="nw">クマチを<em>相手の村</em>に</span><span class="nw">押し込んだら勝ち！</span></p>
@@ -342,7 +342,6 @@
               <li class="trap" style="--tilt:-3deg">
                 <div class="trap__visual">
                   <img class="trap__img" src="assets/img/card-plus1.webp" width="397" height="397" alt="スズのカード" loading="lazy">
-                  <span class="trap__sfx" aria-hidden="true">チリン♪</span>
                 </div>
                 <div class="trap__body">
                   <p class="trap__value">+1</p>
@@ -353,7 +352,6 @@
               <li class="trap" style="--tilt:2deg">
                 <div class="trap__visual">
                   <img class="trap__img" src="assets/img/card-plus2.webp" width="397" height="397" alt="天使のスズのカード" loading="lazy">
-                  <span class="trap__sfx" aria-hidden="true">リンリン♪</span>
                 </div>
                 <div class="trap__body">
                   <p class="trap__value">+2</p>
@@ -364,7 +362,6 @@
               <li class="trap" style="--tilt:-2deg">
                 <div class="trap__visual">
                   <img class="trap__img" src="assets/img/card-plus4.webp" width="397" height="397" alt="大ドラのカード" loading="lazy">
-                  <span class="trap__sfx trap__sfx--big" aria-hidden="true">ジャーン！</span>
                 </div>
                 <div class="trap__body">
                   <p class="trap__value">+4</p>
@@ -390,7 +387,6 @@
               <li class="trap" style="--tilt:2deg">
                 <div class="trap__visual">
                   <img class="trap__img" src="assets/img/card-minus1.webp" width="397" height="397" alt="ハチミツのカード" loading="lazy">
-                  <span class="trap__sfx" aria-hidden="true">ぺろっ</span>
                 </div>
                 <div class="trap__body">
                   <p class="trap__value">−1</p>
@@ -401,7 +397,6 @@
               <li class="trap" style="--tilt:-3deg">
                 <div class="trap__visual">
                   <img class="trap__img" src="assets/img/card-minus2.webp" width="397" height="397" alt="濃厚なハチミツのカード" loading="lazy">
-                  <span class="trap__sfx" aria-hidden="true">とろ〜り</span>
                 </div>
                 <div class="trap__body">
                   <p class="trap__value">−2</p>
@@ -411,6 +406,15 @@
               </li>
             </ul>
           </section>
+        </div>
+
+        <div class="trap-tip">
+          <img class="trap-tip__img" src="assets/img/kumachi-honey.webp" width="560" height="510" alt="ハチミツのツボをかかえて、うれしそうなクマチ" loading="lazy">
+          <div class="trap-tip__body">
+            <p class="trap-tip__label">ここが読み合い！</p>
+            <p class="trap-tip__lead"><span class="nw">自分は<b class="is-plus">スズ</b>を引きたい！</span><span class="nw">相手には<b class="is-minus">ハチミツ</b>を引かせたい！</span></p>
+            <p class="trap-tip__text"><span class="nw">相手はスズをどこに置いた？</span><span class="nw">自分はハチミツをどこに仕掛ける？</span><span class="nw">おたがいの裏を読み合う心理戦です。</span></p>
+          </div>
         </div>
 
         <ul class="notes notes--on-dark">
@@ -476,7 +480,7 @@
                   <span class="mind__cell is-card"></span>
                   <span class="mind__cell"></span>
                   <span class="mind__cell is-card is-one">①</span>
-                  <span class="mind__cell is-kumachi"><img src="assets/img/kumachi-token.webp" width="256" height="208" alt="" loading="lazy"></span>
+                  <span class="mind__cell is-kumachi"><img src="assets/img/kumachi-token.webp" width="256" height="256" alt="" loading="lazy"></span>
                   <span class="mind__cell is-card is-two">②</span>
                   <span class="mind__cell"></span>
                   <span class="mind__cell is-card"></span>

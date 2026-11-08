@@ -22,7 +22,8 @@ apple-touch-icon.png    スマホのホーム画面アイコン
 | `kv-1920.webp` / `kv-1280.webp` | キービジュアル（PC・タブレットのトップ） |
 | `logo.webp` | ロゴ（背景透過） |
 | `kumachi-stand.webp` / `kumachi-jump.webp` | クマチ（背景透過） |
-| `kumachi-token.webp` | クマチのコマ（遊び方デモ・勝利条件で使用） |
+| `kumachi-token.webp` | クマチのまるいコマ（遊び方デモ・勝利条件・心理戦の図で使用） |
+| `kumachi-honey.webp` | ハチミツをかかえたクマチ（トラップカードの「ここが読み合い！」で使用） |
 | `card-plus1.webp` 〜 `card-minus2.webp` | トラップカード5種（+1 / +2 / +4 / −1 / −2） |
 | `ogp.jpg` | SNSでシェアされたときの画像（1200×630） |
 | `card-back.webp` / `card-back-soft.webp` | カード裏面（通常／遊び方デモ用に色を薄くしたもの） |
